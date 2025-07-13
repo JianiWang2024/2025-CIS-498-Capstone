@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html large="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello Javascript</title>
+  </head>
+  <body>
+    <h1>Hello Javascript</h1>
+    <a id="hoverLink" href="https://www.google.com">Search the web</a>
+
+    <script>
+      // alert when mouse is hovered over the hyperlink
+      const link = document.getElementById('hoverLink');
+      link.addEventListener('mouseover', () => {
+        alert("You hovered over the link!");
+      });
+
+      document.write("This is written by JS");
+      alert("The page is loaded!");
+    </script>
+  </body>
+</html>

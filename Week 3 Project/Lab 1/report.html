@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Report Item</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid #4e2a84;
+    }
+
+    input, textarea, button, select {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #4e2a84;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4e2a84;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Report Lost or Found Item</h1>
+
+<form onsubmit="submitForm(event)">
+  <select required>
+    <option value="">Select Type</option>
+    <option value="lost">Lost</option>
+    <option value="found">Found</option>
+  </select>
+
+  <input type="text" placeholder="Item title" required>
+
+  <input type="text" placeholder="Street Address (e.g., 300 E Superior St)" required>
+  <input type="text" placeholder="City" required>
+  <input type="text" placeholder="ZIP Code" required pattern="\d{5}" title="Enter a 5-digit ZIP code">
+
+  <textarea placeholder="Description" required></textarea>
+  <input type="email" placeholder="Your email" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    alert("Thank you! Your item has been submitted.");
+  }
+</script>
+
+</body>
+</html>
