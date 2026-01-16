@@ -1,0 +1,5 @@
+SELECT * from items;
+SELECT * FROM items WHERE type = 'lost';
+SELECT * FROM items WHERE type = 'found';
+SELECT * FROM items WHERE city = 'Evanston';
+SELECT title, type, location, created_at FROM items ORDER BY created_at DESC LIMIT 5;
